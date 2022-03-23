@@ -1,0 +1,15 @@
+.product{
+    width: 300px;
+    height: 510px;
+}
+.product img{
+    width: 286px;
+    height: 286px;
+}
+.product-name{
+    font-family: 'lato';
+    font-weight: 400;
+    font-style: normal;
+    font-size: 21px;
+    line-height: 255px;
+}

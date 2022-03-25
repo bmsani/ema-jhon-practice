@@ -10,7 +10,7 @@ const Shop = () => {
 
 
     useEffect(() => {
-        fetch('products.json')
+        fetch('https://raw.githubusercontent.com/ProgrammingHero1/ema-john-resources/main/fakeData/products.json')
         .then(res => res.json())
         .then(data => setProducts(data))
     },[])
@@ -31,7 +31,7 @@ const Shop = () => {
     },[products])
 
     const handleAddToCart = (selectedProduct) => {
-        const newCart = []
+        let newCart = []
         console.log(selectedProduct);
         let exist = cart.find(product => product.id === selectedProduct.id);
         if(!exist){

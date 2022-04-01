@@ -7,6 +7,7 @@ import './Shop.css'
 const Shop = () => {
     const [products, setProducts] = useState([]);
     const [cart, setCart] = useState([])
+    console.log(cart);
 
 
     useEffect(() => {
@@ -31,9 +32,11 @@ const Shop = () => {
     },[products])
 
     const handleAddToCart = (selectedProduct) => {
+        console.log(selectedProduct);
         let newCart = []
         console.log(selectedProduct);
         let exist = cart.find(product => product.id === selectedProduct.id);
+        console.log();
         if(!exist){
             selectedProduct.quantity = 1;
             newCart = [...cart, selectedProduct]
